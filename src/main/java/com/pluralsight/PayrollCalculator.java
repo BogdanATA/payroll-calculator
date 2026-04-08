@@ -7,16 +7,22 @@ public class PayrollCalculator {
         Scanner myScanner = new Scanner(System.in);
 
         //gather info
-        System.out.println("Enter employee name: ");
+        System.out.print("Enter employee name: ");
         String name = myScanner.nextLine();
 
-        System.out.println("Enter hours worked: ");
+        System.out.print("Enter hours worked: ");
         double hoursWorked = myScanner.nextDouble();
 
-        System.out.println("Enter pay rate: ");
+        System.out.print("Enter pay rate: ");
         double payRate = myScanner.nextDouble();
 
+        //calculate pay
+        double grossPay = hoursWorked * payRate;
 
+        System.out.printf("Employee Name: %s%n", name);
+        System.out.printf("Gross pay: $%.2f", grossPay);
+
+        myScanner.close();
 
 
 
